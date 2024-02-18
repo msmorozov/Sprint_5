@@ -38,15 +38,5 @@ user_data_generator = UserDataGenerator()
 name = user_data_generator.generate_name()
 empty_name = user_data_generator.generate_empty_name()
 email = user_data_generator.generate_email()
-
-
-
-print("Имя пользователя:", name)
-print("Не корректное имя пользователя:", empty_name)
-print("Email пользователя:", email)
-
 password = PasswordGenerator.generate_password()
-print("Сгенерированный пароль:", password)
-
 wrong_password = PasswordGenerator.generate_wrong_password()
-print("Сгенерированный пароль:", wrong_password)
