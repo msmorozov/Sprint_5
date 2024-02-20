@@ -33,12 +33,3 @@ class PasswordGenerator:
 
         password = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(length))
         return password
-
-
-# Пример использования классов
-# user_data_generator = UserDataGenerator()
-# name = user_data_generator.generate_name()
-# empty_name = user_data_generator.generate_empty_name()
-# email = user_data_generator.generate_email()
-# password = PasswordGenerator.generate_password()
-# wrong_password = PasswordGenerator.generate_wrong_password()
