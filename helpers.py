@@ -2,6 +2,7 @@ from faker import Faker
 import secrets
 import string
 
+
 class UserDataGenerator:
     fake = Faker()
 
