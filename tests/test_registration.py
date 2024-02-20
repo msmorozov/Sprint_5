@@ -2,9 +2,7 @@ import data
 import helpers
 import locators
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.common.by import By
 
 
 class TestRegistration:
@@ -44,8 +42,8 @@ class TestRegistration:
         # нажатие на конпку зарегистрироваться
         driver.find_element(*locators.TestLocators.REGISTRATION_BUTTON).click()
         # заполнение обязательных полей
-        driver.find_element(*locators.TestLocators.REGISTRATION_NAME_FIELD).send_keys(helpers.user_data_generator.generate_empty_name())
-        driver.find_element(*locators.TestLocators.REGISTRATION_EMAIL_FIELD).send_keys(helpers.user_data_generator.generate_email())
+        driver.find_element(*locators.TestLocators.REGISTRATION_NAME_FIELD).send_keys(helpers.UserDataGenerator.generate_empty_name())
+        driver.find_element(*locators.TestLocators.REGISTRATION_EMAIL_FIELD).send_keys(helpers.UserDataGenerator.generate_email())
         driver.find_element(*locators.TestLocators.REGISTRATION_PASSWORD_FIELD).send_keys(helpers.PasswordGenerator.generate_password())
         # регистрация
         driver.find_element(*locators.TestLocators.REGISTRATION_NEW_ACCOUNT_BUTTON).click()
@@ -60,8 +58,8 @@ class TestRegistration:
         # нажатие на конпку зарегистрироваться
         driver.find_element(*locators.TestLocators.REGISTRATION_BUTTON).click()
         # заполнение обязательных полей
-        driver.find_element(*locators.TestLocators.REGISTRATION_NAME_FIELD).send_keys(helpers.user_data_generator.generate_name())
-        driver.find_element(*locators.TestLocators.REGISTRATION_EMAIL_FIELD).send_keys(helpers.user_data_generator.generate_email())
+        driver.find_element(*locators.TestLocators.REGISTRATION_NAME_FIELD).send_keys(helpers.UserDataGenerator.generate_name())
+        driver.find_element(*locators.TestLocators.REGISTRATION_EMAIL_FIELD).send_keys(helpers.UserDataGenerator.generate_email())
         driver.find_element(*locators.TestLocators.REGISTRATION_PASSWORD_FIELD).send_keys(helpers.PasswordGenerator.generate_wrong_password())
         # регистрация
         driver.find_element(*locators.TestLocators.REGISTRATION_NEW_ACCOUNT_BUTTON).click()

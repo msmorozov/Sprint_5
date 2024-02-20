@@ -9,7 +9,8 @@ class TestLocators:
     #кнопка регистрации
     REGISTRATION_BUTTON = (By.XPATH, "//a[contains(text(), 'Зарегистрироваться')]")
     #сообщение о не корректном пароле
-    INVALID_PASSWORD_MESSAGE = (By.XPATH, '//p[@class="input__error text_type_main-default"][text()="Некорректный пароль"]')
+    INVALID_PASSWORD_MESSAGE = (By.XPATH, "//p[@class='input__error text_type_main-default' and text()='Некорректный пароль']")
+
     #поле имя в ЛК пользователя
     NAME_SPACE = (By.NAME, "Name")
 
@@ -32,7 +33,8 @@ class TestLocators:
     LOGIN_BUTTON_ON_REGISTRATION_PAGE = (By.XPATH, '//a[@class="Auth_link__1fOlj" and text()="Войти"]')
     #кнопка войти на странице восстановления пароля
     LOGIN_BUTTON_ON_PASSWORD_RECOVERY_PAGE = (By.XPATH, '//a[@class="Auth_link__1fOlj" and text()="Войти"]')
-    LOGIN_FIELD_IN_ACCOUNT = (By.XPATH, '//*[@id="root"]/div/main/div/div/div/ul/li[1]/div/div/input')
+    #поле в аккаунте с именем пользователя
+    LOGIN_FIELD_IN_ACCOUNT = (By.XPATH, "//input[@class='text input__textfield text_type_main-default input__textfield-disabled'][@name='Name']")
 
     #кнопка ЛК
     PERSONAL_ACCOUNT_BUTTON = (By.XPATH,'//p[text()="Личный Кабинет"]')

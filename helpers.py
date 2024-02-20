@@ -3,17 +3,19 @@ import secrets
 import string
 
 class UserDataGenerator:
-    def __init__(self):
-        self.fake = Faker()
+    fake = Faker()
 
-    def generate_name(self):
-        return self.fake.name()
+    @staticmethod
+    def generate_name():
+        return UserDataGenerator.fake.name()
 
-    def generate_empty_name(self):
+    @staticmethod
+    def generate_empty_name():
         return ""
 
-    def generate_email(self):
-        return self.fake.email()
+    @staticmethod
+    def generate_email():
+        return UserDataGenerator.fake.email()
 
 
 
@@ -34,9 +36,9 @@ class PasswordGenerator:
 
 
 # Пример использования классов
-user_data_generator = UserDataGenerator()
-name = user_data_generator.generate_name()
-empty_name = user_data_generator.generate_empty_name()
-email = user_data_generator.generate_email()
-password = PasswordGenerator.generate_password()
-wrong_password = PasswordGenerator.generate_wrong_password()
+# user_data_generator = UserDataGenerator()
+# name = user_data_generator.generate_name()
+# empty_name = user_data_generator.generate_empty_name()
+# email = user_data_generator.generate_email()
+# password = PasswordGenerator.generate_password()
+# wrong_password = PasswordGenerator.generate_wrong_password()
